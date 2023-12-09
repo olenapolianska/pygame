@@ -19,23 +19,32 @@ while True:
             pygame.quit()
 
     keys = pygame.key.get_pressed()
+
     if keys[pygame.K_d]:
-        x1 += 5
+        if x1 + 5 < 800 - 50:
+            x1 += 5
     if keys[pygame.K_s]:
-        x1 -= 5
+        if x1 - 5 > 0 :
+            x1 -= 5
     if keys[pygame.K_x]:
-        y1 += 5
+        if y1 + 5 < 500 - 50:
+            y1 += 5
     if keys[pygame.K_e]:
-        y1 -= 5
+        if y1 - 5 > 0 :
+            y1 -= 5
 
     if keys[pygame.K_RIGHT]:
-        x2 += 5
+        if x2 + 5 < 800 - 50:
+            x2 += 5
     if keys[pygame.K_LEFT]:
-        x2 -= 5
+        if x2 - 5 > 0:
+            x2 -= 5
     if keys[pygame.K_DOWN]:
-        y2 += 5
+        if y2 + 5 < 500 - 50:
+            y2 += 5
     if keys[pygame.K_UP]:
-        y2 -= 5
+        if y2 - 5 > 0:
+            y2 -= 5
 
     window.blit(fon_image, [0, 0])
     window.blit(sprite1, [x1, y1])
